@@ -1,0 +1,17 @@
+#! /bin/bash
+echo "change source...(/etc/pacman.conf)"
+sleep 1
+echo "[archlinuxcn]" >> /etc/pacman.conf
+echo "SigLevel = Optional TrutstAll" >> /etc/pacman.conf
+echo "Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch" >> /etc/pacman.conf
+echo "Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch" >> /etc/pacman.conf
+echo "Server = http://mirrors.163.com/archlinux-cn/$arch" >> /etc/pacman.conf
+echo "done..."
+
+echo "pacman -Syyu"
+pacman -Syyu
+echo "done..."
+
+# if you can user 'pacman-mirrors ' to change cn source,you do need to reboot
+echo "ready to exit,and then you should reboot!"
+

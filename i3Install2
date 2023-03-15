@@ -1,0 +1,6 @@
+echo "pacman -S xorg lightdm lightdm-gtk-greeter i3-gaps i3blocks i3status alacritty"
+pacman -S xorg lightdm lightdm-gtk-greeter i3-gaps i3blocks i3status alacritty
+
+sleep 5
+echo "run systemctl enable lightdm and then reboot"
+
